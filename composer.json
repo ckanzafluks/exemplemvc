@@ -1,0 +1,11 @@
+{
+    "name": "root/blog_jalile",
+    "require": {
+        "phpmailer/phpmailer": "^6.0",
+        "twig/twig": "~2.0",
+        "twbs/bootstrap": "^4.3",
+        "components/jquery": "^3.3",
+        "components/font-awesome": "^5.9",
+        "gymadarasz/jquery.easing": "^1.3"
+    }
+}

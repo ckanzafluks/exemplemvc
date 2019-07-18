@@ -1,0 +1,54 @@
+{% extends "template.twig" %}
+
+{% block twile %}
+<!-- Portfolio Grid Section -->
+<section id="blog">
+    <div class="container">
+
+            <div class="row" style="margin-top: 100px;">
+                <div class="col-lg-12 text-center">
+                    <h2>Articles</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+
+
+                    <!-- Carousel items -->
+        <div class="card-group3">
+
+            <div class="item">
+                
+                <div class="row">
+                    		
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-3">
+                            {% for data in data %}
+                            <div class="card text-center" >
+                                <div id="enteteArt" class="col-md-6"><p>Auteur:{{data.Auteur}}</p></div><div class="col-md-6"><p>{{data.CreateDateArticle|date('d-M-Y')}}</p></div>
+                                <img class="card-img-top" src="{{data.Dirphoto}}"  alt="" width="70%">
+                                <div class="card-block">
+                                    <h4 class="card-title">{{ data.NameArticle }}</h4>
+                                    <p class="card-text">{{ data.Chapo }}.</p>
+                                    <a class="btn btn-default" href="./index.php?action=viewarticle&idarticle={{data.idArticle}}">Lire plus.</a>
+                                </div>
+                            <div class="card-footer">
+                                <small class="text-muted">{% if data.dateModificationArticle %} Dernier mise à jour : {{data.dateModificationArticle}}</small>{% endif %}
+                            </div>
+                            </div>
+{%endfor%}  
+                        </div>
+                        
+                    
+            </div> <!-- item -->
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}
+
+{% block modale %}
+
+
+
+{% endblock %}
+
